@@ -1,0 +1,38 @@
+:root {
+  background-color: #000000;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  /* filter: blur(1px); */
+  margin-top: 2rem;
+}
+
+.timeCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jerga {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  filter: blur(15px);
+}
+
+.cell {
+  width: 9vw;
+  height: 9vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
