@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 export const ColorContext = createContext();
 
 export const ColorProvider = ({ children }) => {
-  const [colorZero, setColorZero] = useState('#ffffff00');
+  const [colorZero, setColorZero] = useState('#000000');
   const [colorOne, setColorOne] = useState('#ffffff');
 
   return (

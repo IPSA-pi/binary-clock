@@ -2,6 +2,10 @@
   background-color: #000000;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
@@ -13,23 +17,36 @@ h1 {
 
 .timeCont {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+button.settingsMenu {
+  position: absolute;
+  bottom: -12vh;
+  font-size: 3rem;
+  font-weight: 1000;
+  background-color: black;
+  color: rgb(148, 148, 148);
+  border: none;
+  /* right: 2vh; */
+  /* right: -40vw; */
+}
+
 .jerga {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: fit-content;
-  filter: blur(15px);
+  /* filter: blur(15px); */
 }
 
 .cell {
-  width: 9vw;
-  height: 9vw;
+  width: 12vh;
+  height: 12vh;
 }
 
 .row {
