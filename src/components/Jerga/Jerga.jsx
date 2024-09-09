@@ -1,9 +1,10 @@
 import { useContext } from 'react';
-import { BlurContext } from '../contexts/BlurContext';
+import { BlurContext } from '../../contexts/BlurContext';
 import Row from './Row';
-import { stringToBinaryArray } from '../utils/stringToBinaryArray'
+import { stringToBinaryArray } from '../../utils/stringToBinaryArray';
+import './jerga.css'
 
-function Jerga({ stringInput }) {
+function Jerga({ stringInput, toggleStyleController }) {
   const { blurValue } = useContext(BlurContext);
   const bArray = stringToBinaryArray(stringInput, 4);
 
@@ -11,6 +12,7 @@ function Jerga({ stringInput }) {
     <div 
       className="jerga"
       style={{ filter: `blur(${blurValue}px)` }}
+      onClick={toggleStyleController}
     >
       {
         bArray.map((bString, index) => (

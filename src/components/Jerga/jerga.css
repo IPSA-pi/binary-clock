@@ -1,0 +1,37 @@
+.jerga {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  /* filter: blur(15px); */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+div.cell {
+  --cell-size: 20vw;
+  --cell-size-2: 11vw;
+  
+  width: var(--cell-size);
+  height: var(--cell-size);
+}
+
+@media (min-width: 1025px) {
+  div.jerga { 
+    flex-direction: row;
+  }
+  
+  div.cell {
+    width: var(--cell-size-2);
+    height: var(--cell-size-2);
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ColorContext } from '../contexts/ColorContext'
+import { ColorContext } from '../../contexts/ColorContext'
 import Cell from './Cell';
 
 function Row({ bString }) {

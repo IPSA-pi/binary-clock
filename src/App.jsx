@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css';
-import Jerga from './components/Jerga';
+import Jerga from './components/Jerga/Jerga';
 import { useBinaryTime } from './hooks/useBinaryTime';
 import { timeToBinary } from './utils/timeToBinary';
 import StyleController from './components/ui/StyleController';
@@ -23,10 +23,8 @@ function App() {
       <ColorProvider>
         <div className='timeCont'>
           {/* <Jerga stringInput={fDate} /> */}
-          <button className="settingsMenu" onClick={toggleStyleController}>⚙</button>
-          <Jerga stringInput={fTime} />
-          {showStyleController && <StyleController />}
-          {/* <h1>bart</h1> */}
+          <Jerga stringInput={fTime} toggleStyleController={toggleStyleController}/>
+          {showStyleController && <StyleController toggleStyleController={toggleStyleController}/>}
         </div>
       </ColorProvider>
     </BlurProvider>

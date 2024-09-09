@@ -1,0 +1,6 @@
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --secondary-color-transparent: rgba(0, 0, 0, 0.726);
+  --accent-color: orange;
+}

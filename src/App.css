@@ -1,18 +1,10 @@
 :root {
   background-color: #000000;
+  font-family: monospace;
 }
 
 body::-webkit-scrollbar {
   display: none;
-}
-
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: 100;
-  text-align: center;
-  /* filter: blur(1px); */
-  margin-top: 2rem;
 }
 
 .timeCont {
@@ -25,31 +17,12 @@ h1 {
 button.settingsMenu {
   position: absolute;
   bottom: -12vh;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 1000;
-  background-color: black;
+  background-color: transparent;
   color: rgb(148, 148, 148);
   border: none;
   /* right: 2vh; */
   /* right: -40vw; */
 }
 
-.jerga {
-  margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  /* filter: blur(15px); */
-}
-
-.cell {
-  width: 12vh;
-  height: 12vh;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}

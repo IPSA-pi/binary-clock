@@ -3,7 +3,7 @@ import { ColorContext } from '../../contexts/ColorContext';
 import { BlurContext } from '../../contexts/BlurContext';
 import './StyleController.css'
 
-function ColorPicker() {
+function StyleController({ toggleStyleController }) {
   const { colorZero, setColorZero, colorOne, setColorOne } = useContext(ColorContext);
   const { blurValue, setBlurValue } = useContext(BlurContext);
   
@@ -40,15 +40,15 @@ function ColorPicker() {
         <input 
           type="range"
           min='0'
-          max='25'
+          max='100'
           value={blurValue}
           onChange={handleBlurChange}
           />
-          <span>{blurValue}px</span>
       </div>
-      
+
+      <div className="cellSize"></div>
     </div>
   )
 }
 
-export default ColorPicker;
+export default StyleController;
