@@ -6,6 +6,7 @@ import { timeToBinary } from './utils/timeToBinary';
 import StyleController from './components/ui/StyleController';
 import { ColorProvider } from './contexts/ColorContext';
 import { BlurProvider } from './contexts/BlurContext';
+import { CellSizeProvider } from './contexts/CellSizeContext';
 
 function App() {
   const [showStyleController, setShowStyleController] = useState(false);
@@ -19,16 +20,18 @@ function App() {
   // const fDate = timeToBinary(time, 'date');
 
   return(
-    <BlurProvider>
-      <ColorProvider>
-        <div className='timeCont'>
-          {/* <Jerga stringInput={fDate} /> */}
-          <Jerga stringInput={fTime} toggleStyleController={toggleStyleController}/>
-          {showStyleController && <StyleController toggleStyleController={toggleStyleController}/>}
-        </div>
-      </ColorProvider>
-    </BlurProvider>
-  )
+    <CellSizeProvider>
+      <BlurProvider>
+        <ColorProvider>
+          <div className='timeCont'>
+            {/* <Jerga stringInput={fDate} /> */}
+            <Jerga stringInput={fTime} toggleStyleController={toggleStyleController}/>
+            {showStyleController && <StyleController toggleStyleController={toggleStyleController}/>}
+          </div>
+        </ColorProvider>
+      </BlurProvider> 
+    </CellSizeProvider>
+    )
 }
 
 export default App

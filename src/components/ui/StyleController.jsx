@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { ColorContext } from '../../contexts/ColorContext';
 import { BlurContext } from '../../contexts/BlurContext';
+import { CellSizeContext } from '../../contexts/CellSizeContext';
 import './StyleController.css'
 
 function StyleController({ toggleStyleController }) {
   const { colorZero, setColorZero, colorOne, setColorOne } = useContext(ColorContext);
   const { blurValue, setBlurValue } = useContext(BlurContext);
+  const { cellSizeValue, setCellSizeValue } = useContext(CellSizeContext);
   
   const handleZeroChange = (event) => {
     setColorZero(event.target.value);
@@ -17,6 +19,10 @@ function StyleController({ toggleStyleController }) {
 
   const handleBlurChange = (event) => {
     setBlurValue(event.target.value);
+  }
+
+  const handleCellSizeChange = (event) => {
+    setCellSizeValue(event.target.value);
   }
 
   const handleSwapColors = () => {
@@ -46,7 +52,17 @@ function StyleController({ toggleStyleController }) {
           />
       </div>
 
-      <div className="cellSize"></div>
+      <div className="cellSize">
+        <label >Cell size {cellSizeValue}</label>
+        <input 
+          type="range" 
+          min='2'
+          max='20'
+          value={cellSizeValue}
+          onChange={handleCellSizeChange}
+        />
+
+      </div>
     </div>
   )
 }
