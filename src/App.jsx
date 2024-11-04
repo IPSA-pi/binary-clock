@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import './App.css';
 import Jerga from './components/Jerga/Jerga';
 import { useBinaryTime } from './hooks/useBinaryTime';
@@ -12,26 +12,26 @@ function App() {
   const [showStyleController, setShowStyleController] = useState(false);
 
   const toggleStyleController = () => {
-    setShowStyleController(prevState => !prevState)
+    setShowStyleController(prevState => !prevState);
   };
 
   const time = useBinaryTime();
-  const fTime = timeToBinary(time, 'hms'); 
+  const fTime = timeToBinary(time, 'hms');
   // const fDate = timeToBinary(time, 'date');
 
-  return(
+  return (
     <CellSizeProvider>
       <BlurProvider>
         <ColorProvider>
           <div className='timeCont'>
             {/* <Jerga stringInput={fDate} /> */}
-            <Jerga stringInput={fTime} toggleStyleController={toggleStyleController}/>
-            {showStyleController && <StyleController toggleStyleController={toggleStyleController}/>}
+            <Jerga stringInput={fTime} toggleStyleController={toggleStyleController} />
+            {showStyleController && <StyleController toggleStyleController={toggleStyleController} />}
           </div>
         </ColorProvider>
-      </BlurProvider> 
+      </BlurProvider>
     </CellSizeProvider>
-    )
+  );
 }
 
-export default App
+export default App;

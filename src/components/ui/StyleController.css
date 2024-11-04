@@ -6,7 +6,7 @@
   border: 2px solid white;
   border-radius: 20px;
   position: absolute;
-  bottom: 50vh;
+  bottom: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -14,7 +14,7 @@
 }
 
 .colorControls {
-  display: flex;  
+  display: flex;
 }
 
 .blurControl {
