@@ -6,7 +6,7 @@
   border: 2px solid white;
   border-radius: 20px;
   position: absolute;
-  bottom: 10vh;
+  bottom: 0vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

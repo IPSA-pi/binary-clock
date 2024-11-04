@@ -1,15 +1,15 @@
 import { useContext } from 'react';
-import { ColorContext } from '../../contexts/ColorContext';
-import { BlurContext } from '../../contexts/BlurContext';
-import { CellSizeContext } from '../../contexts/CellSizeContext';
-import { BorderThicknessContext } from '../../contexts/BorderThicknessContext';
+import { StyleContext } from '../../contexts/StyleContext';
 import './StyleController.css';
 
 function StyleController() {
-  const { colorZero, setColorZero, colorOne, setColorOne } = useContext(ColorContext);
-  const { blurValue, setBlurValue } = useContext(BlurContext);
-  const { cellSizeValue, setCellSizeValue } = useContext(CellSizeContext);
-  const { borderThickness, setBorderThickness } = useContext(BorderThicknessContext);
+  const {
+    colorZero, setColorZero,
+    colorOne, setColorOne,
+    blurValue, setBlurValue,
+    cellSizeValue, setCellSizeValue,
+    borderThickness, setBorderThickness
+  } = useContext(StyleContext);
 
   const handleZeroChange = (event) => {
     setColorZero(event.target.value);
@@ -40,27 +40,24 @@ function StyleController() {
         <input type="color" value={colorOne} onChange={handleOneChange} />
       </div>
       <div className="blurControl">
-        <label>Blur:</label>
         <input
           type="range"
           min='0'
-          max='100'
+          max='30'
           value={blurValue}
           onChange={handleBlurChange}
         />
       </div>
       <div className="cellSizeControl">
-        <label>Cell size {cellSizeValue}</label>
         <input
           type="range"
-          min='2'
+          min='10'
           max='20'
           value={cellSizeValue}
           onChange={handleCellSizeChange}
         />
       </div>
       <div className="borderThicknessControl">
-        <label>Border thickness {borderThickness}px</label>
         <input
           type="range"
           min='1'
